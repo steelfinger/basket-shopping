@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="css/styles.css?v=1.9" type="text/css">
+    <link rel="stylesheet" href="css/media.css?v=1.9" type="text/css">
+
+    <script src="js/helpers.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+<div class="paper">
+    <div id="shoppingListContainer">
+        <h2><span></span> <span class="edit-icon"><img src="images/edit-icon.png" alt="edit"></span></h2>
+        <div id="shoppingListEditor" class="editor">
+            <div class="control-unit">
+                <label for="listTitleInput" class="title-label">Shopping List Title:</label><br>
+                <input id="listTitleInput" class="title-input" data-prop="name" type="text" size="50" maxlength="255">
+            </div>
+
+            <div class="control-unit">
+                <label for="listCreatorInput" class="creator-label">Creator:</label><br>
+                <input id="listCreatorInput" class="creator-input" data-prop="name" type="text" size="32" maxlength="255">
+            </div>
+
+            <div class="control-unit">
+                <label for="listCollectorsInput" class="collectors-label">Collectors:</label><br>
+                <input id="listCollectorsInput" class="collectors-input" data-prop="name" type="text" size="50" maxlength="255">
+            </div>
+
+            <section class="buttons-section">
+                <span class="button">save</span>
+                <span class="button">cancel</span>
+                <span class="button">share</span>
+                <small>Functionality not implemented!</small>
+            </section>
+        </div>
+        <ul class="item-list"></ul>
+    </div>
+    <section id="newItemCreator">
+        <input id="newItemInput" type="text" placeholder="Add new item!" value="" size="64" maxlength="255"><span
+            class="button plus-button">+</span>
+    </section>
+</div>
+
+
+<script id="itemEditorTemplate" type="text/template">
+    <div class="control-unit">
+        <label for="nameInput{id}" class="name-label">Name:</label><br>
+        <input id="nameInput{id}" class="name-input" data-prop="name" type="text" size="32" maxlength="255">
+    </div>
+
+    <div class="control-unit">
+        <label for="uantityInput{id}" class="quantity-label">Quantity:</label><br>
+        <input id="quantityInput{id}" class="quantity-input" data-prop="quantity" type="text" size="6" maxlength="32">
+    </div>
+
+    <div class="control-unit">
+        <label for="unitInput{id}" class="unit-label">Unit:</label><br>
+        <input id="unitInput{id}" class="unit-input" data-prop="unit" type="text" size="2" maxlength="32">
+    </div>
+
+    <div class="control-unit">
+        <label for="priceInput{id}" class="price-label">Estimated price:</label><br>
+        <input id="priceInput{id}" class="price-input" data-prop="price" type="text" size="10" maxlength="255">
+    </div>
+
+    <div class="control-unit">
+        <label for="assignedInput{id}" class="assigned-label">Assign to:</label><br>
+        <input id="assignedInput{id}" class="assigned-input" data-prop="assigned" type="text" size="32" maxlength="255">
+    </div>
+
+    <section class="buttons-section">
+        <span class="button save-button">save</span>
+        <span class="button cancel-button">cancel</span>
+        <span class="button remove-button">remove</span>
+    </section>
+
+    <section id="commentsSection{id}" class="comments-section">
+        <h4>Comments</h4>
+        <div class="textarea-container">
+            <textarea id="commentTextarea{id}">Write a comment...
+
+
+            </textarea>
+        </div>
+        <span class="button addcomment-button">add comment</span>
+        <ul id="commentsList{id}"></ul>
+    </section>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* Large desktops */
+@media (min-width: 992px) {
+    body, html {
+        font-size: 16px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    body, html {
+        font-size: 14px;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+    body, html {
+        font-size: 12px;
+    }
+
+}
+
+
+/* Landscape phones and smaller */
+/*DEFAULT*/
+/*
+@media (max-width: 480px) {
+    body, html {
+        font-size: 10px;
+    }
+
+}
+*/
